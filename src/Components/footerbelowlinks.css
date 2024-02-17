@@ -1,0 +1,28 @@
+.footer-below-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #ffffffc0;
+
+}
+.footer-below-links a{
+    margin-left: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #ffffffc0;
+    
+}
+.footer-below-links a:hover{
+    color: var(--primary);
+}
+@media screen and(max-width: 550px){
+    .footer-below-links{
+        flex-direction: column;
+    }
+    .footer-below-links a{
+        
+        margin-top: 1rem;
+        
+    }
+    
+}

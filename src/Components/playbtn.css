@@ -1,0 +1,66 @@
+.banner .trailer{
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .trailer.active{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.banner .trailer p{
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.banner .playBtn{
+    position: relative;
+    color: #ffffff;
+    width: 80px;
+    height: 80px;
+    transition: 1s;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.banner .playBtn .play-icon{
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+.banner .playBtn:hover{
+    box-shadow: 0 0 15px #950101;
+}
+@media screen and (max-width: 1190px){
+    
+    .banner .playBtn{
+        width: 50px;
+        height: 50px;
+    }
+    .banner .playBtn .play-icon{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 446px){
+    .banner .playBtn{
+        height: 35px;
+        width: 35px;
+    }
+    .banner .playBtn .play-icon{
+        font-size: 0.9rem;
+    }
+    .banner .trailer p{
+        font-size: 1.4rem;
+    }
+}
+

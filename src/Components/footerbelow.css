@@ -1,0 +1,13 @@
+.footer-below{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #ffffffc0;
+}
+@media screen and (max-width: 700px){
+    .footer-below{
+        flex-direction: column;
+        justify-content: left;
+    }
+}

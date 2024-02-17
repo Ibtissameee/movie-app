@@ -1,0 +1,39 @@
+.button{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button:hover{
+    box-shadow:  0 0 20px #950101;
+}
+@media screen and (max-width: 800px){
+    .button{
+        font-size: 1rem;
+        font-weight: 300;
+        gap: 5px;
+        margin-right: 10px;
+        padding: 5px 10px;
+    }
+}
+@media screen and (max-width: 613px){
+   .button{
+    margin-left: 7px;
+    padding:  2px 5px;
+    font-weight: 200px;
+   }
+}
+@media screen and (max-width: 407px){
+    .button{
+        margin-left: 0px;
+    }
+}

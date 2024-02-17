@@ -1,0 +1,10 @@
+.coming-soon-swiper.swiper {
+    padding-top: 100px;
+      
+      
+}
+.coming-soon-swiper .swiper-slide {
+    
+    width: 250px;
+    height: 100%;
+}
