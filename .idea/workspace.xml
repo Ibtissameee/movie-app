@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="412e5a98-ee45-4140-9672-e5ee5b3a6f07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/backend (1).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/BackendApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/controler/MovieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/dto/MovieDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/mapper/MovieMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/model/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/model/MovieDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/repository/MovieDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/repository/MovieRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/service/MovieDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/service/MovieDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/service/MovieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/java/com/moviesapp/backend/service/MovieServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend (1)/backend/src/test/java/com/moviesapp/backend/BackendApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/icons8-success.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/turning_red2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/wrath_of_man2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/AppLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/ErrorAlert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/FormValidation/SignUpSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/SeatBookingContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/SignInUpWrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/SuccessAlert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/seatbookingcontainer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/totalseats.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/MovieBooking.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/SignInUpContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/data/moviesData.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/data/moviesData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Birdboxbarcelona.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Birdboxbarcelona.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Birdboxbarcelona2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Birdboxbarcelona2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Creed32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Creed32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/FORDEVWEBPROJECTModif.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/FORDEVWEBPROJECTModif.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Retribution.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Retribution.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Retribution2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Retribution2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Runrabbitrun.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Runrabbitrun.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Runrabbitrun2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Runrabbitrun2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Talktome.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Talktome.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Talktome2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Talktome2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Thenun2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Thenun2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Thenun22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Thenun22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Youpeople2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Youpeople2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Youpeople_.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/Youpeople_.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/creed3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/creed3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/turning_redIMG.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/turning_redIMG.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/wrath_of_man.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/images/wrath_of_man.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BackToTopBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/BackToTopBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BookingContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/BookingContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CinemaRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/CinemaRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ComingSoonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/ComingSoonCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FooterBelow.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/FooterBelow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FooterBelowCopyRight.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/FooterBelowCopyRight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FooterBelowLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/FooterBelowLinks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FooterContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/FooterContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FooterLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/FooterLinks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MovieCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/MovieCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MovieContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/MovieContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MovieDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/MovieDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MovieSwiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/MovieSwiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/NavListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PlayBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/PlayBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SeatsBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/SeatsBooking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ShowCase.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/ShowCase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SignInUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/SignInUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SignInUpWrapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TotalSeats.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/TotalSeats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/backtotopbtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/backtotopbtn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/banner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/bookingcontainer.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/bookingcontainer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/cinemarow.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/cinemarow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/comingsooncard.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/comingsooncard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/footerbelow.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/footerbelow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/footerbelowlinks.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/footerbelowlinks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/footercontent.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/footercontent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/footerlinks.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/footerlinks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/moviecard.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/moviecard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/moviecontent.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/moviecontent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/moviedate.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/moviedate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/movieswiper.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/movieswiper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/navlistitem.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/navlistitem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/playbtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/playbtn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/seatsbooking.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/seatsbooking.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/showcase.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/showcase.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/signinup.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/signinup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/signinupwrapper.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/signinupwrapper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ComingSoon.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/ComingSoon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MoviesCardsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/MoviesCardsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/comingsoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/comingsoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/moviebooking.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/moviebooking.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/moviescardslist.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/moviescardslist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/FilterList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/FilterList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/navListData.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/navListData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2m6ycnoIXQoYB5dCWY8CkYvdnNj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="412e5a98-ee45-4140-9672-e5ee5b3a6f07" name="Changes" comment="" />
+      <created>1726411402664</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726411402664</updated>
+    </task>
+    <servers />
+  </component>
+</project>
