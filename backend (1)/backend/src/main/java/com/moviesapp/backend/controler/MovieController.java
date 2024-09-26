@@ -20,6 +20,7 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/movies")
+@CrossOrigin(origins = "http://localhost:3000")
 public class MovieController {
 
     @Autowired
@@ -52,10 +53,10 @@ public class MovieController {
                 });
     }
 
-    @GetMapping("all-movies")
+    @GetMapping("/all-movies")
     public Flux<MovieDTO> getAllMovies() {
         return movieService.getAllMovies()
-                .map(MovieMapper::movieEntityToMovieDTO);//method reference so we refer to the method directly without needing to create an instance of the class
+                .map(MovieMapper::movieEntityToMovieDTO);
     }
 
     private Mono<byte[]> filePartToBytes(FilePart filePart) {

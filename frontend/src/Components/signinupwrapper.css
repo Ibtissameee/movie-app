@@ -2,12 +2,15 @@
     width: 500px;
     color: #ffffff;
     border-radius: 10px;
-    padding: 30px 50px;
+    padding: 30px 10px;
     box-shadow: rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(149, 1, 1, 0.2);
     backdrop-filter: blur(30px);
+    
+
 
 }
+
 .sign-in-up-wrapper h1{
     font-size: 35px;
     text-align: center;

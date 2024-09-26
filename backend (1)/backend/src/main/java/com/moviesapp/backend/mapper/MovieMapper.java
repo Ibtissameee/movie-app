@@ -2,18 +2,24 @@ package com.moviesapp.backend.mapper;
 
 import com.moviesapp.backend.dto.MovieDTO;
 import com.moviesapp.backend.model.Movie;
+import org.apache.logging.log4j.util.Base64Util;
+
+
+import java.util.Base64;
 
 public class MovieMapper {
 
     public static MovieDTO movieEntityToMovieDTO(Movie movie){
         MovieDTO movieDTO = new MovieDTO();
             movieDTO.setId(movie.getId());
-       /* if(movie.getMovieDetails().getPreviewImgPath() != null){
-            movieDTO.setPreviewImgPath(movie.getMovieDetails().getPreviewImgPath());
+        if(movie.getPreviewImgPath() != null){
+            String previewImgBase64 = Base64.getEncoder().encodeToString(movie.getPreviewImgPath());
+            movieDTO.setPreviewImgPath(previewImgBase64);
         }
-        if(movie.getMovieDetails().getBgImgPath() != null){
-            movieDTO.setBgImgPath(movie.getMovieDetails().getBgImgPath());
-        }*/
+        if(movie.getBgImgPath() != null){
+            String bgImgBase64 = Base64.getEncoder().encodeToString(movie.getBgImgPath());
+            movieDTO.setBgImgPath(bgImgBase64);
+        }
         if(movie.getTrailer() != null){
             movieDTO.setTrailer(movie.getTrailer());
         }

@@ -4,6 +4,7 @@ import SeatBookingContainer from "./SeatBookingContainer";
 import ShowCase from "./ShowCase";
 import TotalSeats from "./TotalSeats";
 import './bookingcontainer.css';
+import { Link } from "react-router-dom";
 export default function BookingContainer(){
     const [selectedSeatsCount, setSelectedSeatsCount] = useState(0);
     const handleSelectedSeatsChange = (count)=>{
@@ -15,12 +16,14 @@ export default function BookingContainer(){
             <ShowCase/>
             <SeatBookingContainer onSelectedSeatsChange={handleSelectedSeatsChange}/>
             <TotalSeats selectedSeatsCount={selectedSeatsCount}/>
-            <Button name="Next"
-                color='#ffffff'
-                bgColor='#950101'
-                border='none'
-                backdropfilter='none'
-            />
+           <Link to="/payment">
+                <Button name="Next"
+                    color='#ffffff'
+                    bgColor='#950101'
+                    border='none'  
+                    backdropfilter='none'
+                />
+            </Link>
         </div>
     );
 }

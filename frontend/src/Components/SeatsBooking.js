@@ -4,6 +4,7 @@ import './seatsbooking.css';
 import Button from "./Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 export default function SeatsBooking({onCloseClick}) {
     const [selected, setSelected] = useState([]);
@@ -56,12 +57,14 @@ export default function SeatsBooking({onCloseClick}) {
                 ))}
                  <p className="total">You have selected <span id="count">{selected.length}</span>seats for a price of $ <span id="total">{totalPrice} </span></p>
             </div>
-            <Button name="Next" 
-                color='#ffffff'
-                bgColor='#950101'
-                border='none'
-                backdropfilter='none'
-                />
+            <Link to="/checkout">
+                <Button name="Next" 
+                    color='#ffffff'
+                    bgColor='#950101'
+                    border='none'
+                    backdropfilter='none'
+                    />
+            </Link>
         </div>
     );
 }

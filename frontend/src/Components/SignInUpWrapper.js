@@ -6,14 +6,12 @@ import { useState } from 'react';
 import axios from 'axios';
 import SuccessAlert from './SuccessAlert';
 import ErrorAlert from './ErrorAlert';
-import { signUpSchema } from './FormValidation/SignUpSchema';
+import { loginSchema, signUpSchema } from './FormValidation/SignUpSchema';
 import { Formik, Form, Field , ErrorMessage} from 'formik';
+import { useNavigate } from 'react-router-dom';
+import { useLoggedIn } from './UserContext';
 export default function SignInWrapper({onCloseClick}){
     const [isSignUp, setIsSignUp] = useState(false);
-   // const [username, setUsername] = useState("");
-    //const [email, setEmail] = useState("");
-    //const [password, setPassword] = useState("");
-    //const [matchingPassword, setMatchingPassword] = useState("");
     const [role, setRole] = useState('USER');
     const [successMessage, setSuccessMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
@@ -23,15 +21,91 @@ export default function SignInWrapper({onCloseClick}){
     //const [showErrorModal, setShowErrorModal] = useState(false);
     const handleCloseModal = () => setShowModal(false);
     //const handleCloseErrorModal = () => setShowErrorModal(false);
+    const navigate = useNavigate();
+    const {isLoggedIn, setIsLoggedIn, setRefreshToken} = useLoggedIn();
     const handleClick = ()=>{
         setIsSignUp(!isSignUp);
     };
     const handleSubmit = async (values, { setSubmitting }) => {
       try {
-          const response = await axios.post("http://localhost:9000/signup", values);
+          let response;
+          if(isSignUp) {
+            console.log(values);
+            // Fetch the admin token
+            const tokenResponse = await axios.post("http://localhost:8080/realms/CinemaAppRealm/protocol/openid-connect/token", {
+              client_id: "cinema-app-rest-api", // Your client ID
+              client_secret: "oSBm1tJgQCV6huhUEUGnjw0bpMnLWYV7",
+              username: "admin", 
+              password: "admin", 
+              grant_type: "password"
+          },
+          {
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+          }
+        );
+        
+
+          const adminToken = tokenResponse.data.access_token; // Get the access token of the admin
+          console.log(adminToken)
+          
+
+          response = await axios.post("http://localhost:9002/movies/register", {
+              username: values.username,
+              email: values.email,
+              enabled: true,
+              credentials: [
+                  {
+                      type: "password",
+                      value: values.password,
+                      temporary: false 
+                  }
+              ],
+              "attributes": {
+                "email_verified": ["true"]
+            }
+          },
+        {
+          headers: {
+            'Authorization': `Bearer ${adminToken}`,
+            'Content-Type': 'application/json'
+          }
+        }); 
+        setSuccess(true);
+        setShowModal(true);
+          } else{
+            const tokenResponseUser = await axios.post("http://localhost:8080/realms/CinemaAppRealm/protocol/openid-connect/token", {
+              client_id: "cinema-app-rest-api", // Your client ID
+              client_secret: "oSBm1tJgQCV6huhUEUGnjw0bpMnLWYV7",
+              username: values.username, 
+              password: values.password, 
+              grant_type: "password"
+          },
+          {
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+          }
+        );
+            const userToken = tokenResponseUser.data.access_token;
+            setRefreshToken(tokenResponseUser.data.refresh_token);
+            response = await axios.post("http://localhost:9002/movies/login", {
+              username: values.username,
+              password: values.password
+            },
+            {
+              headers: {
+                'Authorization': `Bearer ${userToken}`,
+                'Content-Type': 'application/json'
+              }
+            });
+            setIsLoggedIn(true);
+            navigate('/');
+          }
+         
           console.log("Response from server", response.data);
-          setSuccess(true);
-          setShowModal(true);
+          
       } catch (error) {
           console.log("Error: ", error.response.data);
           setError(true);
@@ -48,12 +122,12 @@ export default function SignInWrapper({onCloseClick}){
              <Formik
              initialValues={{
               username: '',
-              email: '',
+              email: isSignUp ? '' : null,
               password: '',
-              setMatchingPassword: '',
+              matchingPassword: isSignUp ? '' : null,
               role: 'USER'
              }}
-             validationSchema={signUpSchema}
+             validationSchema={isSignUp ? signUpSchema: loginSchema}
              onSubmit={handleSubmit}
              >
               {({ isSubmitting }) => (

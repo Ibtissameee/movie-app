@@ -15,9 +15,9 @@ export default function Banner({onBookClick}){
         .catch(e => console.log(e.message));
     };*/
     const fetchData = async()=>{
-        const result = await axios.get("http://localhost:9000/movies/movies");
+        const result = await axios.get("http://localhost:9002/movies/all-movies");
         setMovies(result.data);
-        console.log(result);
+        console.log(movies);
     };
     
     useEffect(() =>{
@@ -32,12 +32,13 @@ export default function Banner({onBookClick}){
             return movie;
         })
         setMovies(newMovies);
+        console.log(movies);
     }
     return(
         <div className="banner">
             {movies && movies.length>0 && movies.map((movie,index) => (
                 <div className="movie" key={index}>
-                <img  className={`bgImg ${movie.active ? 'active': undefined}`} src={movie.bgImg}/>
+                <img  className={`bgImg ${movie.active ? 'active': undefined}`}  src={`data:image/jpeg;base64,${movie.bgImgPath}`}/>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-6 col-md-12">

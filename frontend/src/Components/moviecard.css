@@ -10,6 +10,11 @@ section .movie-card{
     height: 30rem;
 
 }
+section .movie-card img {
+    height: 70%; /* Fill the container */
+    width: 100%;  /* Ensure it takes up the full width */
+    object-fit: cover; /* Cover the entire container without distorting */
+}
 section .movie-card:hover .content{
     right: 0;
 }

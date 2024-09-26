@@ -8,9 +8,9 @@ public class MovieDTO {
     private Long id;
 
 
-    //private byte[] previewImgPath;
+    private String previewImgPath;
 
-    //private byte[] bgImgPath;
+    private String bgImgPath;
 
     private String trailer;
 
@@ -27,6 +27,8 @@ public class MovieDTO {
     private String type;
 
     private String description;
+
+    private boolean isActive;
 
 
 

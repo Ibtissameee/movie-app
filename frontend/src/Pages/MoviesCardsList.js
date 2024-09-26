@@ -15,7 +15,7 @@ export default function MoviesCardsList({type}){
         .catch(e => console.log(e.message));
     };*/
     const fetchData = async()=>{
-        const result = await axios.get("http://localhost:9000/movies/movies");
+        const result = await axios.get("http://localhost:9002/movies/all-movies");
         setData(result.data);
         console.log(result);
     };

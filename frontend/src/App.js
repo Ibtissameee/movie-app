@@ -13,11 +13,23 @@ import SeatsBooking from './Components/SeatsBooking';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import AppLayout from './AppLayout';
 import SignInUpContainer from './Pages/SignInUpContainer';
+import CheckoutForm from './Components/payment/CheckoutForm';
+import Completion from './Components/payment/Completion';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Payment from './Components/payment/Payment';
+import UserProvider from './Components/UserContext';
+
+const stripePromise = loadStripe("pk_test_51Q0lUd05RdrRFtkIwJrtosoRNI6wpCb0vooYLQFnkpeAcr4dkSQQSCAuT3U1fOJr8RzTKnehoaCcT1HuQOcVnme200CQbqDS2S");
+
 
 function App() {
+
   const [scroll, setScroll] = useState(0);
   const [showSignIn, setShowSignIn] = useState(false);
   const [showBooking, setShowBooking] = useState(false);
+
+
     useEffect(()=>{
     window.addEventListener('scroll', ()=>{
       setScroll(window.scrollY);
@@ -41,14 +53,17 @@ function App() {
     setShowBooking(false);
   }
   return (
-    <>
+    <UserProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<AppLayout/>}></Route>
           <Route path="/signinup" exact element={<SignInUpContainer/>}></Route>
+           {/* Wrap CheckoutForm with Elements provider only when clientSecret is available */}
+          <Route path="/payment" element={<Payment/>}/>
+          <Route path="/complete" element={<Completion />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </UserProvider>
   );
 }
 

@@ -30,7 +30,7 @@ export default function MovieSwiper({slides, slideChange}){
        >
         {slides.map((slide) => ( // Added the correct map syntax
         <SwiperSlide > {/* Added key prop for optimization */}
-          <img src={slide.previewImg} alt="Preview Image" onClick={()=>slideChange(slide.id)}/>
+          <img src={`data:image/jpeg;base64,${slide.previewImgPath}`} alt="Preview Image" onClick={()=>slideChange(slide.id)}/>
         </SwiperSlide>
       ))}
        </Swiper>
