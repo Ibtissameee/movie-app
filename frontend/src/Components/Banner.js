@@ -5,8 +5,10 @@ import MovieContent from "./MovieContent";
 import MovieDate from "./MovieDate";
 import MovieTrailer from "./PlayBtn";
 import MovieSwiper from "./MovieSwiper";
+import MovieProvider from "./MovieContext";
 export default function Banner({onBookClick}){
     const [movies, setMovies] = useState([]);
+   
     //fetch data from moviesData.json file
    /* const fetchData = ()=>{
         fetch('http://localhost:3000/data/moviesData.json')
@@ -16,8 +18,13 @@ export default function Banner({onBookClick}){
     };*/
     const fetchData = async()=>{
         const result = await axios.get("http://localhost:9002/movies/all-movies");
-        setMovies(result.data);
-        console.log(movies);
+        const modifiedMovies = result.data.map((movie, index) => ({
+            ...movie,
+            active: index === 0 ? true : false,
+        }));
+        setMovies(modifiedMovies)
+        //setOldMovies(result.data)
+        console.log("Movies fetched: ",movies);
     };
     
     useEffect(() =>{
@@ -35,6 +42,7 @@ export default function Banner({onBookClick}){
         console.log(movies);
     }
     return(
+        
         <div className="banner">
             {movies && movies.length>0 && movies.map((movie,index) => (
                 <div className="movie" key={index}>
@@ -55,5 +63,6 @@ export default function Banner({onBookClick}){
             
             {movies && movies.length>0 && <MovieSwiper slides={movies} slideChange={handleSlideChange}/>}
         </div>
+        
     );
 }

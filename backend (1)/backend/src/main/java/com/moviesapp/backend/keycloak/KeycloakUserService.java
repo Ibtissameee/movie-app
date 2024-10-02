@@ -1,11 +1,16 @@
 package com.moviesapp.backend.keycloak;
 
+import org.keycloak.KeycloakPrincipal;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.ReactiveSecurityContextHolder;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -101,5 +106,17 @@ public class KeycloakUserService {
                 .bodyToMono(Map.class)
                 .map(response -> (String) response.get("access_token"))
                 .doOnNext(token -> this.keycloakToken = token); // Cache the token
+    }
+
+    public Mono<String> getCurrentUserId() {
+        return ReactiveSecurityContextHolder.getContext()
+                .map(securityContext -> {
+                    String userId = "Unknown";
+                    if (securityContext.getAuthentication() instanceof JwtAuthenticationToken) {
+                        JwtAuthenticationToken jwtAuth = (JwtAuthenticationToken) securityContext.getAuthentication();
+                        userId = jwtAuth.getToken().getClaimAsString("sub");
+                    }
+                    return userId;
+                });
     }
 }

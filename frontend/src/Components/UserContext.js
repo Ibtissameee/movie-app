@@ -4,8 +4,9 @@ const UserContext = createContext();
 function UserProvider({children}) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [refreshToken, setRefreshToken] = useState("");
+    const [accessToken, setAccessToken] = useState("");
   return (
-    <UserContext.Provider value={{isLoggedIn, setIsLoggedIn, refreshToken, setRefreshToken}}>
+    <UserContext.Provider value={{isLoggedIn, setIsLoggedIn, refreshToken, setRefreshToken, accessToken, setAccessToken}}>
       {children}
     </UserContext.Provider>
   )

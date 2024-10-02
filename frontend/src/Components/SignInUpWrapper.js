@@ -18,6 +18,7 @@ export default function SignInWrapper({onCloseClick}){
     const [showModal, setShowModal] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const {accessToken, setAccessToken} = useLoggedIn();
     //const [showErrorModal, setShowErrorModal] = useState(false);
     const handleCloseModal = () => setShowModal(false);
     //const handleCloseErrorModal = () => setShowErrorModal(false);
@@ -101,6 +102,7 @@ export default function SignInWrapper({onCloseClick}){
               }
             });
             setIsLoggedIn(true);
+            setAccessToken(userToken);
             navigate('/');
           }
          

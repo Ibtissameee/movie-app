@@ -13,7 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/payments")
+@RequestMapping("/movies/payments")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PaymentController {
 
     @Value("${stripe.apiKey}")

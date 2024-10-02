@@ -36,7 +36,7 @@ public class Movie {
 
     private String description;
 
-    private boolean isActive;
+
 
 
 

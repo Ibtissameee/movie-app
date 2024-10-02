@@ -22,7 +22,7 @@ export default function NavBar({scroll, onSignInClick}){
       if (!updatedNavList.some((nav) => nav.name === "My List")) {
         updatedNavList.push({
           id: updatedNavList.length + 1,
-          link: "/my-list",
+          link: "#myList",
           name: "My List",
           active: false,
         });

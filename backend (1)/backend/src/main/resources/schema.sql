@@ -10,6 +10,18 @@ CREATE TABLE IF NOT EXISTS movies (
     category VARCHAR(255) NOT NULL,
     type VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
-    is_active BOOLEAN NOT NULL,
     PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS seats(
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    row_number VARCHAR(255) NOT NULL,
+    column_number INT NOT NULL,
+    is_occupied BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (id)
+    );
+CREATE TABLE IF NOT EXISTS favorite_movies (
+    user_id VARCHAR(255),  -- This is the Keycloak user ID
+    movie_id BIGINT,
+    PRIMARY KEY (user_id, movie_id),
+    FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
 );

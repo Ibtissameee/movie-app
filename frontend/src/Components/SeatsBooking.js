@@ -5,9 +5,12 @@ import Button from "./Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
+import { useCurrentMovie } from "./MovieContext";
 
 export default function SeatsBooking({onCloseClick}) {
     const [selected, setSelected] = useState([]);
+    const {currentMovie} = useCurrentMovie();
+    console.log(currentMovie);
     const rows = [
         { id: 'A', seats: Array.from({ length: 10 }, (_, index) => `A${index + 1}`) },
         { id: 'B', seats: Array.from({ length: 10 }, (_, index) => `B${index + 1}`) },
@@ -37,7 +40,7 @@ export default function SeatsBooking({onCloseClick}) {
     return (
         <div className="seats">
            <FontAwesomeIcon className="close-icon" icon={faXmark} onClick={onCloseClick}/>
-            <div className="movie-title">Movie Title</div>
+            <div className="movie-title">{currentMovie.title}</div>
             <ShowCase />
             <div className="seats-picker">
                 <div className="screen"></div>
@@ -57,7 +60,7 @@ export default function SeatsBooking({onCloseClick}) {
                 ))}
                  <p className="total">You have selected <span id="count">{selected.length}</span>seats for a price of $ <span id="total">{totalPrice} </span></p>
             </div>
-            <Link to="/checkout">
+            <Link to="/payment">
                 <Button name="Next" 
                     color='#ffffff'
                     bgColor='#950101'

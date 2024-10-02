@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import SignInUp from './Components/SignInUp';
 import MovieBooking from './Pages/MovieBooking';
 import SeatsBooking from './Components/SeatsBooking';
+import { ChakraProvider } from '@chakra-ui/react';
+import MovieProvider from './Components/MovieContext';
 export default function AppLayout() {
 const [scroll, setScroll] = useState(0);
 const [showSignIn, setShowSignIn] = useState(false);
@@ -37,7 +39,8 @@ const handleCloseBookClick = ()=>{
   setShowBooking(false);
 }
 return (
-  <>
+  <MovieProvider>
+  
     <NavBar
      scroll={scroll}
     onSignInClick={handleSignInClick}
@@ -47,9 +50,11 @@ return (
     <Banner onBookClick={handleBookClick}/>
    {/* <MovieBooking/>*/}
     <Main/>
+    
     <Footer/>
     <BackToTopBtn scroll={scroll}/>
+    </MovieProvider>
     
-  </>
+  
 );
 }
