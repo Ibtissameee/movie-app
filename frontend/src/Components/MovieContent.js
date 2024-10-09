@@ -19,7 +19,7 @@ useEffect(()=>{
   if(movie.active)
   setCurrentMovie({movie});
 }, [movie.active])
-console.log("Current movie in Movie Content : ", {currentMovie})
+useEffect(() => {console.log("Current movie in Movie Content : ", {currentMovie})}, [currentMovie]);
 const navigate = useNavigate();
 const handleAddToMyList = async () => {
   if(isLoggedIn){

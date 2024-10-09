@@ -57,10 +57,9 @@ export default function SeatsBooking({onCloseClick}) {
         }
         
     };
-   useEffect(()=>{
-    setSelectedSeats((prevSelectedSeats) => [...prevSelectedSeats, ...selected]);
-   }, [selected])
-console.log("Selected Seats ",selectedSeats);
+    const handleNextClick = () => {
+        setSelectedSeats(selected); // Set selected seats only when the user confirms by clicking Next
+      };
     return (
         <div className="seats">
             {console.log("Selected seats:", selected)}
@@ -94,6 +93,7 @@ console.log("Selected Seats ",selectedSeats);
                     bgColor='#950101'
                     border='none'
                     backdropfilter='none'
+                    onClick={handleNextClick}
                     />
             </Link>
         </div>
