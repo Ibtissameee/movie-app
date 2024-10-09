@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { loadStripe } from '@stripe/stripe-js'
 import { PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { useSelectedSeats } from '../SeatsContext';
+import { useNavigate } from 'react-router-dom';
 
 function CheckoutForm({dpmCheckerLink}) {
   const stripe = useStripe();
@@ -8,6 +10,9 @@ function CheckoutForm({dpmCheckerLink}) {
 
   const [message, setMessage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
+  const {selectedSeats} = useSelectedSeats();
+  const navigate = useNavigate();
+  useEffect(()=>{console.log("Selected seats from checkout form: ",selectedSeats )}, [selectedSeats]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +24,7 @@ function CheckoutForm({dpmCheckerLink}) {
     }
 
     setIsProcessing(true);
-
+    localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {

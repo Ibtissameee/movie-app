@@ -7,13 +7,7 @@ export default function MoviesCardsList({type}){
     const [data, setData] = useState([]);
     const [movies, setMovies] = useState([]);
     const [filters, setFilters] = useState(filterList);
-     //fetch data from moviesData.json file
-   /* const fetchData = async()=>{
-        fetch('http://localhost:3000/data/moviesData.json')
-        .then(res => res.json())
-        .then(data => setData(data))
-        .catch(e => console.log(e.message));
-    };*/
+     
     const fetchData = async()=>{
         const result = await axios.get("http://localhost:9002/movies/all-movies");
         setData(result.data);
@@ -70,7 +64,7 @@ export default function MoviesCardsList({type}){
                 }
                 <div className="row mt-5">
                     {movies && movies.length>0 && movies.map((movie)=>{
-                      return <MovieCard key={movie.id} movie={movie}/>
+                      return <MovieCard key={movie.id} movie={movie} isMyList={false}/>
                     })
                     
                     }

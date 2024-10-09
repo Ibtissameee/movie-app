@@ -5,12 +5,21 @@ import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
 import { useLoggedIn } from '../UserContext';
 import { CircularProgress } from '@chakra-ui/react';
+import { useSelectedSeats } from '../SeatsContext';
+
 
 function Payment() {
     const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
   const [loading, setLoading] = useState(true);
   const {accessToken} = useLoggedIn();
+  const {selectedSeats} = useSelectedSeats();
+
+  useEffect(() => {console.log("Selected Seats from Payment: ", selectedSeats)}, [selectedSeats]);
+  console.log(accessToken);
+  localStorage.setItem('accessToken', accessToken);
+
+  
 
   useEffect(() => {
     fetch("http://localhost:9002/movies/payments/config", {

@@ -20,6 +20,8 @@ import { Elements } from "@stripe/react-stripe-js";
 import Payment from './Components/payment/Payment';
 import UserProvider from './Components/UserContext';
 import MyList from './Components/MyList';
+import MovieProvider from './Components/MovieContext';
+import SeatsProvider from './Components/SeatsContext';
 
 const stripePromise = loadStripe("pk_test_51Q0lUd05RdrRFtkIwJrtosoRNI6wpCb0vooYLQFnkpeAcr4dkSQQSCAuT3U1fOJr8RzTKnehoaCcT1HuQOcVnme200CQbqDS2S");
 
@@ -55,6 +57,7 @@ function App() {
   }
   return (
     <UserProvider>
+      <SeatsProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<AppLayout/>}></Route>
@@ -65,6 +68,7 @@ function App() {
           <Route path="/complete" element={<Completion />} />
         </Routes>
       </BrowserRouter>
+      </SeatsProvider>
     </UserProvider>
   );
 }

@@ -9,13 +9,6 @@ import MovieProvider from "./MovieContext";
 export default function Banner({onBookClick}){
     const [movies, setMovies] = useState([]);
    
-    //fetch data from moviesData.json file
-   /* const fetchData = ()=>{
-        fetch('http://localhost:3000/data/moviesData.json')
-        .then(res => res.json())
-        .then(data => setMovies(data))
-        .catch(e => console.log(e.message));
-    };*/
     const fetchData = async()=>{
         const result = await axios.get("http://localhost:9002/movies/all-movies");
         const modifiedMovies = result.data.map((movie, index) => ({
@@ -46,6 +39,7 @@ export default function Banner({onBookClick}){
         <div className="banner">
             {movies && movies.length>0 && movies.map((movie,index) => (
                 <div className="movie" key={index}>
+                    {console.log("current movie in banner : ", {movie})}
                 <img  className={`bgImg ${movie.active ? 'active': undefined}`}  src={`data:image/jpeg;base64,${movie.bgImgPath}`}/>
                 <div className="container-fluid">
                     <div className="row">

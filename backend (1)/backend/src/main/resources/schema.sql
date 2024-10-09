@@ -25,3 +25,11 @@ CREATE TABLE IF NOT EXISTS favorite_movies (
     PRIMARY KEY (user_id, movie_id),
     FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
 );
+CREATE TABLE IF NOT EXISTS tickets(
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    movie_id BIGINT,
+    user_id VARCHAR(255), --This is the keycloak user ID
+    selected_seats BIGINT,
+    booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (movie_id) REFERENCES movies(id)
+);

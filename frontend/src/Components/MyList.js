@@ -2,10 +2,15 @@ import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard';
 import axios from 'axios';
 import { useLoggedIn } from './UserContext';
+import { useCurrentMovie } from './MovieContext';
 function MyList() {
     const [favoriteMoviesList, setFavoriteMoviesList] = useState([]);
     const {accessToken} = useLoggedIn();
-    console.log(accessToken)
+    const {refetch} = useCurrentMovie();
+    useEffect(() => {
+        console.log(accessToken)
+        console.log("Refetch from  MyList", refetch)
+    }, [accessToken, refetch]);
     const fetchData = async()=>{
         try{
             const response = await fetch("http://localhost:9002/movies/all-favorite-movies", {
@@ -34,7 +39,7 @@ function MyList() {
     useEffect(() =>{
         fetchData()
         console.log("Favorite Movies list:  ", favoriteMoviesList)
-    },[accessToken]);
+    },[refetch]);
     return (
         <div>
              <section className="movies-cards-list" id="myList">
@@ -44,7 +49,7 @@ function MyList() {
                     </div>
                     <div className="row mt-5">
                         {favoriteMoviesList && favoriteMoviesList.length>0 && favoriteMoviesList.map((movie)=>{
-                        return <MovieCard key={movie.id} movie={movie}/>
+                        return <MovieCard key={movie.id} movie={movie} isMyList={true}/>
                         })
                         
                         }

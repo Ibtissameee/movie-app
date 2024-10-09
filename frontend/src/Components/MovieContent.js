@@ -13,11 +13,13 @@ import { useEffect, useState } from 'react';
 import { useCurrentMovie } from './MovieContext';
 export default function MovieContent({movie, onBookClick}){
 const {isLoggedIn, accessToken} = useLoggedIn();
-const {setCurrentMovie, currentMovie} = useCurrentMovie();
+const {setCurrentMovie, currentMovie, setRefetch} = useCurrentMovie();
 //console.log("Current Movie :  ", currentMovie)
 useEffect(()=>{
+  if(movie.active)
   setCurrentMovie({movie});
-})
+}, [movie.active])
+console.log("Current movie in Movie Content : ", {currentMovie})
 const navigate = useNavigate();
 const handleAddToMyList = async () => {
   if(isLoggedIn){
@@ -34,6 +36,7 @@ const handleAddToMyList = async () => {
         }
       );
       console.log("Movie added to favorites: ", response.data);
+      setRefetch((prev) => prev+1);
       toast.success("Movie Added Successfully To Your List!");
      
     }catch(error){

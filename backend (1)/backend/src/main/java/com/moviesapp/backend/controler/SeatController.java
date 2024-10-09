@@ -6,11 +6,9 @@ import com.moviesapp.backend.mapper.SeatMapper;
 import com.moviesapp.backend.model.Seat;
 import com.moviesapp.backend.service.SeatService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/movies")
@@ -25,5 +23,22 @@ public class SeatController {
     public Flux<SeatDTO> getAllSeats(){
         return seatService.getAllSeats()
                 .map(SeatMapper::seatEntityToSeatDTO);
+    }
+
+    @GetMapping("/occupied-seats")
+    public Flux<SeatDTO> getOccupiedSeats(){
+        return seatService.getOccupiedSeats()
+                .map(SeatMapper::seatEntityToSeatDTO);
+    }
+
+    @GetMapping("/seat-id")
+    public Mono<Long> getSeatId(@RequestParam String rowNumber, @RequestParam int columnNumber){
+        return seatService.getSeatId(rowNumber, columnNumber);
+
+    }
+
+    @PutMapping("/update-seat")
+    public Mono<Seat> updateSeat(@RequestParam String rowNumber, @RequestParam int columnNumber){
+        return seatService.updateSeat(rowNumber, columnNumber);
     }
 }
